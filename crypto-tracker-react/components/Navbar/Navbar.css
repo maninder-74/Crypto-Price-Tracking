@@ -1,0 +1,128 @@
+nav{
+     padding: 20px 10%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom:2px solid #3c3c3c;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+     height:2.2rem;
+}
+.items ul{
+     display: flex;
+     gap:3vw;
+     font-size:15px;
+}
+.items li{
+     list-style: none;
+}
+.right-items{
+     height:40px;
+     display: flex;
+     align-items: center;
+     gap:1vw;
+    }
+.right-items select{
+    background: linear-gradient(#0b004e,#1d152f,#002834);
+     display: flex;
+     align-items: center;
+     color:white;
+     height:80%;
+     font-size:13px;
+     font-weight: bold;
+     padding:6px;
+     border-radius: 8px;
+     border:2px solid white;
+}
+.right-items select option{
+    background-color: #0b004e;  
+    color:white;
+    padding: 2px 0;
+}
+select:hover{
+     cursor: pointer;
+}
+.right-items select option:checked{ 
+    outline:none;
+    
+}
+#sign-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     height: 100%;
+     width:130px;
+     border-radius: 50px;
+     font-size:14px;
+     font-weight:500;
+}
+#arrow{
+    height:30%;
+     text-align: center;
+     padding-left: 10px;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 16px 6%;
+    }
+
+    .items ul {
+        gap: 2vw;
+        font-size: 0.95rem;
+    }
+
+    .right-items {
+        gap: 1.5vw;
+    }
+
+    #sign-up {
+        width: 100px;
+        font-size: 13px;
+    }
+
+    .logo img {
+        height: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 14px 5%;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+    .items {
+        display: none;
+    }
+
+    .right-items select {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #sign-up {
+        width: 110px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo img {
+        height: 1.5rem;
+    }
+    .right-items {
+        align-items: center;
+    }
+
+    #sign-up {
+                width: 100px;
+
+    }
+}
