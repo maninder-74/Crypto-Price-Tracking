@@ -1,0 +1,60 @@
+.home {
+  padding: 5%;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  max-width: 600px;
+  border: 1px solid white;
+  padding: 18px auto;
+  text-align: center;
+}
+#mainHeading {
+  font-size: 4vw;
+  padding-bottom: 4vh;
+}
+#description {
+  width: 75%;
+  font-size: 1rem;
+  color: #e3e3e3;
+  line-height: 1.5rem;
+  padding-bottom: 4vh;
+}
+.hero form {
+  width: 80%;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid white;
+}
+.hero form > input {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+  font-size:15px;
+  margin-left: 10px;
+  border:none;  
+}
+.hero form>input:focus{
+     outline:0;
+}
+.hero input::placeholder {
+  font-weight: 500;
+}
+#submit-button {
+  padding: 10px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  background: #7927ff;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
