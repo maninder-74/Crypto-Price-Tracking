@@ -1,8 +1,9 @@
 .home {
-  padding: 5%;
-  padding-bottom: 100px;
+  padding: 5.5%;
+  padding-bottom: 3rem;
   display: flex;
   justify-content: center;
+  /* border:1px solid white; */
 }
 .hero {
   display: flex;
@@ -10,12 +11,13 @@
   align-items: center;
   flex-direction: column;
   max-width: 600px;
-  border: 1px solid white;
   padding: 18px auto;
   text-align: center;
+  /* border:1px solid white; */
+  
 }
 #mainHeading {
-  font-size: 4vw;
+  font-size: 4rem;
   padding-bottom: 4vh;
 }
 #description {
@@ -33,18 +35,17 @@
   justify-content: center;
   padding: 5px;
   border-radius: 4px;
-  border: 1px solid white;
 }
 .hero form > input {
   width: 100%;
   height: 100%;
   padding: 15px 0;
-  font-size:15px;
+  font-size: 15px;
   margin-left: 10px;
-  border:none;  
+  border: none;
 }
-.hero form>input:focus{
-     outline:0;
+.hero form > input:focus {
+  outline: 0;
 }
 .hero input::placeholder {
   font-weight: 500;
@@ -57,4 +58,55 @@
   color: #fff;
   cursor: pointer;
   border: none;
+}
+
+.crypto-table{    
+    max-width: 800px;
+    margin: auto;
+    background:linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15));
+    border-radius:15px;
+}
+
+.table-layout{
+   display: grid;
+   grid-template-columns: .5fr 2.2fr 1.2fr 1fr 1.5fr;
+   padding: 15px 20px; 
+   align-items: center;
+   border-bottom: 1px solid #3c3c3c;
+}
+.table-layout img{
+   width: 37px;
+}
+#market{
+   text-align: right;
+   padding-right: 18px;
+}
+.coin-name{
+   display: flex;
+   align-items: center;
+   gap:1.3vw;
+}
+@media (max-width: 1024px){
+  #mainHeading {
+    font-size: 3.6rem;
+    padding-bottom: 4vh;
+  }
+  .hero {
+    margin: 4rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #mainHeading {
+    font-size: 2.8rem;
+  }
+  #description {
+    width: 72%;
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 480px) {
+  #mainHeading {
+    font-size: 2.3rem;
+  }
 }
