@@ -1,18 +1,16 @@
 import {React,useContext, useEffect, useState }  from 'react'
 import './Home.css'
 import { CoinContext } from '../context/Context';
-
 export default function Home() {
-const {allCoinsData} = useContext(CoinContext);
-console.log(allCoinsData)
+
+const {allCoinsData,currency} = useContext(CoinContext);
+
 const [coinsDisplay,setcoinsDisplay] = useState([]);
+// console.log(currency)
 useEffect(()=>{
      setcoinsDisplay(allCoinsData);
 },[allCoinsData])
-//  coinsDisplay.slice(0,10).map((item,index)=>{
-//   console.log(item.market_cap_rank);
-// });
- 
+
   return (
     <>
     <div className='home'>
@@ -28,19 +26,26 @@ useEffect(()=>{
      <div className='crypto-table'>
           <div className='table-layout'>
                   <div><p>#</p></div>
-                  <div><p>Coins</p></div>
+                  <div><p id='coinName'>Coins</p></div>
                   <div><p>Price</p></div>
                   <div><p>24H Change</p></div>
-                  <div><p id="market">Market Cap</p></div>
+                  <div id="hrs-change"><p id="market">Market Cap</p></div>
            </div>
              {
                coinsDisplay.slice(0,10).map((item,index)=>(
+                
                   <div className="table-layout" key={index}>
+
                     <div><p>{item.market_cap_rank}</p></div>
+
                     <div className='coin-name'><img src={item.image} alt="" />{item.name} - {item.symbol}</div>
-                    <div><p>$ {item.current_price.toLocaleString()}</p></div>
+
+                    <div><p>{currency.symbol}&nbsp;&nbsp;{item.current_price.toLocaleString()}</p></div>
+
                     <div><p>{Math.floor(item.price_change_percentage_24h*100)/100}</p></div>
-                    <div><p id="market">$ {item.market_cap.toLocaleString()}</p></div>
+
+                    <div id="hrs-change"><p id="market">{currency.symbol}&nbsp;&nbsp;{item.market_cap.toLocaleString()}</p></div>
+
                   </div>
             ))
           }

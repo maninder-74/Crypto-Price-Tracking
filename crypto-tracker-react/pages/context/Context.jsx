@@ -5,20 +5,27 @@ export const CoinContext = createContext();
 
 function CoinContextProvider(props) { 
 const [allCoinsData,setCoinData] = useState([]);
-// console.log(allCoinsData);
-const fetchAllCoins = async() =>{
+// console.log(allCoinsData)
+const [currency,setCurrency] = useState({
+    name:"usd",
+    symbol:"$"  
+})
+// console.log(currency)
+const fetchAllCoins = async() => {
+
 const options = {method: 'GET', headers: {'x-cg-demo-api-key': 'CG-wnRaK6w78YDVMqTx1yrhTeeM'}};
 
-fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd', options)
+fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`, options)
   .then(res => res.json())
   .then(res => setCoinData(res))
   .catch(err => console.error(err));
 }
 useEffect(()=>{
     fetchAllCoins();  
-},[])
+},[currency])
+
 const ContextValue = {
-    allCoinsData
+    allCoinsData,currency,setCurrency
 }  
     return(
         <CoinContext.Provider value={ContextValue}>
