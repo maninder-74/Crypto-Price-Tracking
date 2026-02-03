@@ -1,8 +1,8 @@
+import Footer from '../../components/Footer/Footer'
 import {React,useContext, useEffect, useState }  from 'react'
 import './Home.css'
 import { CoinContext } from '../context/Context';
 export default function Home() {
-
 const {allCoinsData,currency} = useContext(CoinContext);
 
 const [coinsDisplay,setcoinsDisplay] = useState([]);
@@ -23,6 +23,7 @@ useEffect(()=>{
             </form>   
          </div>
     </div>
+
      <div className='crypto-table'>
           <div className='table-layout'>
                   <div><p>#</p></div>
@@ -31,7 +32,8 @@ useEffect(()=>{
                   <div><p>24H Change</p></div>
                   <div id="hrs-change"><p id="market">Market Cap</p></div>
            </div>
-             {
+                    
+                           {
                coinsDisplay.slice(0,10).map((item,index)=>(
                 
                   <div className="table-layout" key={index}>
@@ -49,8 +51,10 @@ useEffect(()=>{
                   </div>
             ))
           }
-     </div>
-     
+      </div>
+       <div>
+        <Footer/>
+       </div>
   </>
   )
 }

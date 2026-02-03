@@ -67,8 +67,8 @@
     background:linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15));
     border-radius:15px;
     padding: 0 10px;
+    margin-bottom: 100px;
 }
-
 .table-layout{
    display: grid;
    grid-template-columns: .5fr 2.2fr 1.2fr 1fr 1.5fr;
@@ -101,11 +101,7 @@
      padding:0 1vw;
   }
 }
-@media (max-width: 845px) {
-  .crypto-table{
-      margin: 0 14px;
-  }
-}
+
 
 @media (max-width: 768px) {
   #coinName{
@@ -114,6 +110,9 @@
   }
   #hrs-change{
     display: none;
+  }
+  .crypto-table{
+     margin-bottom: 50px;
   }
   .table-layout{
             grid-template-columns: .5fr 3fr 1fr 1fr;
@@ -146,4 +145,5 @@
   #mainHeading {
     font-size: 2.3rem;
   }
+  
 }
