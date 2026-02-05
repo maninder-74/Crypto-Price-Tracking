@@ -5,12 +5,11 @@ export const CoinContext = createContext();
 
 function CoinContextProvider(props) { 
 const [allCoinsData,setCoinData] = useState([]);
-// console.log(allCoinsData)
 const [currency,setCurrency] = useState({
     name:"usd",
     symbol:"$"  
 })
-// console.log(currency)
+
 const fetchAllCoins = async() => {
 
 const options = {method: 'GET', headers: {'x-cg-demo-api-key': 'CG-wnRaK6w78YDVMqTx1yrhTeeM'}};

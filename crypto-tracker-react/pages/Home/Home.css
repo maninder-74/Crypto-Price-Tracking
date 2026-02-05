@@ -1,149 +1,91 @@
-.home {
-  padding: 5.5% ;
-  padding-bottom: 3rem;
-  display: flex;
-  justify-content: center;
-  /* border:1px solid white; */
+
+.Home{
+      padding: 0 10px 100px;
 }
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  max-width: 600px;
-  padding: 18px auto;
-  text-align: center;
-  /* border:1px solid white; */
-  
+.hero{
+    max-width: 600px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
 }
-#mainHeading {
-  font-size: 4rem;
-  padding-bottom: 4vh;
+#mainHeading{
+   font-size: max(4vw,36px);
 }
-#description {
-  width: 75%;
-  font-size: 1rem;
-  color: #e3e3e3;
-  line-height: 1.5rem;
-  padding-bottom: 4vh;
+#description{
+    width: 75%;
+    color: #e3e3e3;
+    line-height: 1.5;
 }
-.hero form {
-  width: 80%;
-  display: flex;
-  background-color: #fff;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  border-radius: 4px;
+.hero form{ 
+    padding: 8px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex:0;
 }
-.hero form > input {
+.hero input{
   width: 100%;
-  height: 100%;
-  padding: 15px 0;
+  height: 2.5em;
   font-size: 15px;
   margin-left: 10px;
   border: none;
+  outline:none;
 }
-.hero form > input:focus {
-  outline: 0;
+.hero button{
+    border: none;
+    background: #7927ff;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
 }
-.hero input::placeholder {
-  font-weight: 500;
-}
-#submit-button {
-  padding: 10px 30px;
-  border-radius: 6px;
-  font-size: 16px;
-  background: #7927ff;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-}
-
-.crypto-table{    
+.crypto-table {
     max-width: 800px;
-    border:1px solid white;
     margin: auto;
-    background:linear-gradient(rgba(84,3,255,0.15),rgba(105,2,153,0.15));
-    border-radius:15px;
-    padding: 0 10px;
-    margin-bottom: 100px;
+    background: linear-gradient(#5403ff26, #69029926);
+    border-radius: 15px;
 }
-.table-layout{
-   display: grid;
-   grid-template-columns: .5fr 2.2fr 1.2fr 1fr 1.5fr;
-   padding: 15px 20px; 
-   align-items: center;
-   border-bottom: 1px solid #3c3c3c;
-}
-.table-layout img{
-   width: 37px;
-}
-#market{
-   text-align: right;
-   padding-right: 18px;
+.table-layout {
+    display: grid;
+    grid-template-columns: .5fr 2fr 1.5fr 1fr 1.5fr;
+    padding: 15px 20px;
+    align-items: center;
+    border-bottom: 1px solid #3c3c3c;
+    align-self: center;
 }
 .coin-name{
-   display: flex;
+  display: flex;
    align-items: center;
    gap:1.3vw;
 }
-@media (max-width: 1024px){
-  #mainHeading {
-    font-size: 3.6rem;
-    padding-bottom: 4vh;
-  }
-  .hero {
-    /* margin: 4rem 0; */
-    padding-bottom: 40px;
-  }
-  .crypto-table{
-     padding:0 1vw;
-  }
+.table-layout img{
+   width:35px;
 }
-
-
+#hrs-change{
+   text-align: right; 
+   padding-right: 12px;
+}
+@media (max-width: 500px) {
+    .table-layout {
+        font-size: 13px;
+    }
+}
 @media (max-width: 768px) {
-  #coinName{
-     text-align: left;
-     padding-left: 7px;
-  }
-  #hrs-change{
-    display: none;
-  }
-  .crypto-table{
-     margin-bottom: 50px;
-  }
-  .table-layout{
-            grid-template-columns: .5fr 3fr 1fr 1fr;
-            text-align: center;
-            align-items: center;
-            
-  }
-  .table-layout img{
-    width: 35px;
-  }
-  #mainHeading {
-    font-size: 2.8rem;
-  }
-  #description {
-    width: 72%;
-    line-height: 1.5rem;
-  }
-}
-@media(max-width:500px){
-
-  .table-layout{
-     font-size:13px;
-     gap:12px;
-  }
-   .table-layout img{
-     width:25px;
-   }
-}
-@media (max-width: 480px) {
-  #mainHeading {
-    font-size: 2.3rem;
-  }
-  
+    .table-layout {
+        grid-template-columns: .5fr 2fr 1fr 1fr;
+    }
+ 
+    #hrs-change{
+      display: none;
+    }
 }

@@ -1,16 +1,18 @@
 nav{
-     padding: 20px 10%;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     border-bottom:2px solid #3c3c3c;
+   display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    color: #ddd;
+    border-bottom: 2px solid #3c3c3c;
 }
 .logo{
     display: flex;
     align-items: center;
 }
 .logo img{
-     height:2.2rem;
+     width: max(12vw, 120px);
+     cursor: pointer;
 }
 .items ul{
      display: flex;
@@ -27,16 +29,11 @@ nav{
      gap:1vw;
     }
 .right-items select{
-    background: linear-gradient(#0b004e,#1d152f,#002834);
-     display: flex;
-     align-items: center;
-     color:white;
-     height:80%;
-     font-size:13px;
-     font-weight: bold;
-     padding:6px;
-     border-radius: 8px;
-     border:2px solid white;
+      padding: 5px 8px;
+    border-radius: 6px;
+    border: 2px solid white;
+    background: transparent;
+    color: #fff;
 }
 .right-items select option{
     background-color: #0b004e;  
@@ -66,52 +63,23 @@ select:hover{
      padding-left: 10px;
 }
 
-@media (max-width: 1024px) {
-    nav {
-        padding: 16px 6%;
-    }
-
-    .items ul {
-        gap: 2vw;
-        font-size: 0.95rem;
-    }
-
-    .right-items {
-        gap: 1.5vw;
-    }
-
-    #sign-up {
-        width: 100px;
-        font-size: 13px;
-    }
-
-    .logo img {
-        height: 1.8rem;
+@media (max-width: 900px) {
+    .navbar {
+        padding: 20px 8%;
     }
 }
-
 @media (max-width: 768px) {
-    nav {
-        padding: 14px 5%;
-        flex-wrap: wrap;
-        gap: 12px;
+    .navbar {
+        padding: 20px 5%;
     }
-    .items {
+   
+}
+@media(max-width:948px){
+      .items ul{
         display: none;
     }
-
-    .right-items select {
-        font-size: 12px;
-        padding: 5px;
-    }
-
-    #sign-up {
-        width: 110px;
-        height: 38px;
-        font-size: 13px;
-    }
 }
-
+/* @m
 @media (max-width: 480px) {
 
     .logo img {
@@ -125,4 +93,4 @@ select:hover{
                 width: 100px;
 
     }
-}
+} */
