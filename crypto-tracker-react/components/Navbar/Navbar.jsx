@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CoinContext } from "../../pages/context/Context";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import arrow from "../../assets/arrow_icon.png";
 import "./Navbar.css";
@@ -33,15 +34,25 @@ const {setCurrency} = useContext(CoinContext);
        <nav>
           
           <div className="logo">
+              <Link to={"/"}>
                <img src={logo} alt="logo"/>
+              </Link>
           </div>
           
           <div className="items">
                <ul>
-                   <li>Home</li>
-                   <li>Features</li>
-                   <li>Pricing</li>
-                   <li>Blog</li>
+                   <Link to={"/"}>
+                         <li>Home</li>
+                   </Link>
+                   <Link>
+                         <li>Features</li>
+                   </Link>
+                   <Link>
+                         <li>Pricing</li>
+                   </Link>
+                   <Link>
+                         <li>Blog</li>
+                   </Link>
                </ul>
           </div>
 
